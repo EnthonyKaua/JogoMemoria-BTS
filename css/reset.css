@@ -1,0 +1,30 @@
+@font-face{
+
+    font-family: 'BTS-Font';
+    src: url(../font/Lovelo-LineBold.otf);
+    font-weight: bold;
+    
+}
+
+@font-face{
+
+    font-family: 'BTS-Font';
+    src: url(../font/Lovelo-Black.otf);
+    
+}
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'BTS-Font';
+    user-select: none;
+
+}
+
+a{
+
+    text-decoration: none;
+
+}

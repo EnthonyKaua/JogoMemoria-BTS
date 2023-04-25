@@ -1,0 +1,212 @@
+:root{
+
+    --firstColor: rgba(255, 255, 255, 0.781);
+    --secondColor: rgba(90, 90, 90, 0.527);
+    --thirdColor: rgba(85, 0, 85, 0.301)
+
+}
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: fixed linear-gradient(rgba(6, 111, 231, 0.377), var(--thirdColor), pink, rgba(177, 174, 174, 0.514));
+
+}
+
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 800px;
+    height: 3rem;
+    padding: 2%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(137, 43, 226, 0.336);
+    font-size: clamp(10pt, 25%, 75pt);
+
+}
+
+#seg{
+
+    font-size: 60%;
+
+}
+
+.mesa{
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    width: 95%;
+    max-width: 800px;
+    z-index: 1;
+
+}
+
+.carta{
+
+    aspect-ratio: 3/4;
+    border-radius: 4px;
+    background: rgba(48, 48, 48, 0.747);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 500ms ease-in;
+
+}
+
+.parte{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.frente{
+
+    border: solid 2px var(--firstColor);
+    transform: rotateY(180deg);
+    transition: all 500ms ease-in;
+
+}
+
+.verso{
+
+    background-image: url("../images/BTS.png");
+    border: solid 2px var(--secondColor);
+    backface-visibility: hidden;
+    
+}
+
+.verso:hover{
+
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    cursor: pointer;
+
+}
+
+.cartaRevelada{
+
+    transform: rotateY(180deg);
+
+}
+
+.acertado{
+
+    filter: saturate(0);
+    opacity: 0.5;
+
+}
+
+.parabenizacao{
+
+    height: 38.5rem;
+    width: 100%;
+    max-width: 850px;
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    z-index: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(96, 71, 122, 0.425);
+    border: solid 2px var(--secondColor);
+    transition-duration: all 1s ease-in-out;
+
+}
+
+.parabenizacao h1{
+
+    color: rgb(70, 16, 158);
+    text-shadow: 4px 3px 3px rgb(95, 95, 95);
+
+}
+
+.parabenizacao p{
+
+    color: white;
+    padding: 0.5% 1%;
+    background-color: rgba(53, 7, 105, 0.562);
+    text-shadow: 4px 3px 2px rgb(41, 41, 41);
+
+}
+
+.parabenizacao button{
+
+    margin-top: 1%;
+    width: 20%;
+    margin-bottom: 5px;
+    height: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    color: rgba(53, 7, 105);
+    background-color: rgba(255, 255, 255, 0.726);
+    border: solid 2px black;
+    box-shadow: 4px 3px rgba(53, 7, 105);
+
+}
+
+.botaoRepetir:hover{
+
+    cursor: pointer;
+    color: rgba(255, 255, 255);
+    background-color: rgba(53, 7, 105, 0.726);
+    box-shadow: 4px 3px rgba(79, 51, 110, 0.76);
+    
+}
+
+.botaoRepetir:active{
+
+    box-shadow: none;
+
+}
+
+@media screen and (max-width: 768px){
+
+    .mesa{
+        
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+
+    .parabenizacao{
+
+        height: 80%;
+
+    }
+
+}
+
+@media screen and (max-width: 425px){
+
+    body{
+
+        height: 90vh;
+
+    }
+
+    .mesa{
+        
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .parabenizacao{
+
+        height: 95%;
+
+    }
+
+}
