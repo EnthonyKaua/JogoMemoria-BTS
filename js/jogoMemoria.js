@@ -130,7 +130,7 @@ function criarCartas(figura){
     verso.className = "parte verso";
 
     //Adicionando imagem do membro à frente da carta
-    frente.style.backgroundImage = `url(../images/${figura}.jpg)`;
+    frente.style.backgroundImage = `url(images/${figura}.jpg)`;
 
     //Adicionando atributo data-figura à carta
     carta.setAttribute("data-figura", `${figura}`)
