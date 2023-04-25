@@ -218,3 +218,27 @@ header{
     }
 
 }
+
+@media screen and (max-width: 320px){
+
+    body{
+
+        height: 85vh;
+        margin-top: 3%;
+
+    }
+
+    .mesa{
+
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .parabenizacao{
+
+        height: 85%;
+        width: 96%;
+
+    }
+    
+}
