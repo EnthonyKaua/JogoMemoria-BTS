@@ -1,8 +1,12 @@
-if(!localStorage.getItem("Nome do Jogador")){
+document.addEventListener("DOMContentLoaded", () => {
 
-    window.location.replace("https://enthonykaua.github.io/JogoMemoria-BTS/");
+    if(!localStorage.getItem("Nome do Jogador")){
 
-};
+        window.location.replace("https://enthonykaua.github.io/JogoMemoria-BTS/");
+
+    };
+
+});
 
 const mesa = document.querySelector(".mesa");
 const botaoResetar = document.querySelector(".botaoRepetir");
