@@ -194,6 +194,7 @@ header{
     body{
 
         height: 90vh;
+        margin-top: 3%;
 
     }
 
@@ -206,11 +207,12 @@ header{
     .parabenizacao{
 
         height: 95%;
+        width: 98%;
 
     }
-    
-    .parabenizacao button{
 
+    .parabenizacao button{
+    
         width: 50%;
 
     }
